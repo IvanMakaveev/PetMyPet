@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 
 import * as petService from './../../services/petService';
-import Pet from './../Pet'
+import PetCard from './../PetCard'
 import CategoryNavigation from './CategoryNavigation'
 
 const Categories = ({
@@ -33,7 +33,7 @@ const Categories = ({
 
             <ul className="other-pets-list">
                 {pets.map(x =>
-                    <Pet key={x.id} {...x} />
+                    <PetCard key={x.id} {...x} />
                 )}
             </ul>
         </section>
